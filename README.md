@@ -1,5 +1,5 @@
 # api-beamer
-Unofficial PHP library for V0 of the Beamer API.
+A simple gateway for Beamer manager.
 =======
 # Api-Beamer PHP
 
