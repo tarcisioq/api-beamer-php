@@ -17,6 +17,5 @@
             "Beamer\\" : "src/Beamer"
         }
     },
-    "version": "0.1",
-    "minimum-stability": "dev"
+    "version": "0.1"
 }
