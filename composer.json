@@ -1,0 +1,22 @@
+{
+    "name": "tarcisioq/beamer-api",
+    "description": "A simple gateway for Beamer manager.",
+    "keywords": ["beamer", "api","getbemaer"],
+    "type": "package",
+    "license": "MIT",
+    "authors": [{
+        "name": "Tarcisio Quaresma",
+        "homepage": "https://github.com/tarcisioq",
+        "role": "developer"
+    }],
+    "require": {
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Beamer\\" : "src/Beamer"
+        }
+    },
+    "version": "0.1",
+    "minimum-stability": "dev"
+}
