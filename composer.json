@@ -1,7 +1,7 @@
 {
-    "name": "tarcisioq/beamer-api",
-    "description": "A simple gateway for Beamer manager.",
-    "keywords": ["beamer", "api","getbemaer"],
+    "name": "tarcisioq/api-beamer-php",
+    "description": "A simple gateway for Beamer manager.\nUnofficial PHP library.",
+    "keywords": ["beamer","getbemaer","beamer-php"],
     "type": "package",
     "license": "MIT",
     "authors": [{
