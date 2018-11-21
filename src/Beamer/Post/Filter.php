@@ -3,6 +3,7 @@
 namespace Beamer\Post;
 
 use Beamer\Beamer;
+use MongoDB\Driver\Exception\ExecutionTimeoutException;
 
 /**
  * Class Filter
@@ -28,8 +29,10 @@ class Filter
     /**
      * The Constructor
      */
-    public function __construct()
+    public function __construct($maxResults = 100,$page=null)
     {
+        $this->maxResults = (int)$maxResults;
+        $this->page = (int)$page;
     }
 
     /**
@@ -47,14 +50,27 @@ class Filter
             "published" => $this->published ? "true" : "false"
         ];
     }
+    /**
+     * @param datetime $dt
+     * @format Y-m-d H:i:s
+     */
+    public function setDate($dateTime){
+        try {
+            if ($dt = new \DateTime($dateTime)) {
+                $this->date = $dt->format("c");
+            } else throw new \Exception("Invalid date time");
+        } catch (\Exception $e){
+            throw new \Exception("Invalid date time");
+        }
+    }
 
     /**
      * @param null $query
      * @return Filter
      */
-    public function setQuery($query)
+    public function setQuery($filter)
     {
-        $this->query = $query;
+        $this->query = $filter;
     }
 
     /**

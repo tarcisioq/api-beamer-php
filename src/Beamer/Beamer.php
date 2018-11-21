@@ -218,7 +218,6 @@ class Beamer
             else $options = array("body" => $body);
 
             $options = array_merge($options, ['headers' => $headers], $this->environment->getOptions());
-            print_r($options);
             $response = $this->httpClient->request($request->getMethod(),$url,$options);
 
             return $this->builder->build($request,$response);
