@@ -13,7 +13,7 @@ composer require tarcisioq/api-beamer-php
 ## Usage
 ```php
 include "vendor/autoload.php";
-``
+```
 
 See /tests for usage tips;
 
