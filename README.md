@@ -3,7 +3,7 @@ A simple gateway for Beamer manager.
 =======
 # Api-Beamer PHP
 
-Unofficial PHP library for v0.1.0 of the Beamer API.
+Unofficial PHP library for v0.1.2 of the Beamer API.
 
 ## Install
 ```

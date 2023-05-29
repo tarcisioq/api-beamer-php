@@ -20,6 +20,8 @@ class Filter
 
     protected $date = null;
 
+    protected $showExpired = true;
+
     protected $maxResults = 100;
 
     protected $page = null;
@@ -29,10 +31,11 @@ class Filter
     /**
      * The Constructor
      */
-    public function __construct($maxResults = 100,$page=null)
+    public function __construct($maxResults = 100,$page=null,$showExpired=true)
     {
         $this->maxResults = (int)$maxResults;
         $this->page = (int)$page;
+        $this->setShowExpired($showExpired);
     }
 
     /**
@@ -45,6 +48,7 @@ class Filter
         return [
             'filter' => $this->query,
             "date" => $this->date,
+            "expired" => (bool)$this->showExpired,
             "maxResults" => $this->maxResults,
             "page" => $this->page,
             "published" => $this->published ? "true" : "false"
@@ -79,5 +83,13 @@ class Filter
     public function setPublished($published)
     {
         $this->published = $published;
+    }
+
+    /**
+     * @param bool $showExpired
+     */
+    public function setShowExpired(bool $showExpired)
+    {
+        $this->showExpired = $showExpired;
     }
 }
