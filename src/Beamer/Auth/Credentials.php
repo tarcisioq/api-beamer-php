@@ -13,7 +13,7 @@ use Beamer\Beamer;
  * @package Beamer\Merchant
  * @author Tarcisio Quaresma <tarcisio@iset.com.br>
  */
-class Credentials implements \Serializable
+class Credentials
 {
 
     /**
