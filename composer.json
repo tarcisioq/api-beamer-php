@@ -10,12 +10,12 @@
         "role": "developer"
     }],
     "require": {
-        "guzzlehttp/guzzle": "^6.0"
+        "guzzlehttp/guzzle": "*"
     },
     "autoload": {
         "psr-4": {
             "Beamer\\" : "src/Beamer"
         }
     },
-    "version": "0.1.3"
+    "version": "0.1.4"
 }
